@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface IUsuariosServicio {
     List<Usuarios> ObtenerTodos();
+    Usuarios AgregarUsuario(Usuarios usuario);
 }

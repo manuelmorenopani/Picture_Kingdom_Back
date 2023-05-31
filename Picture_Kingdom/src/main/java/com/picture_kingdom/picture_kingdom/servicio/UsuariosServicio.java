@@ -15,6 +15,12 @@ public class UsuariosServicio implements IUsuariosServicio{
 
     @Override
     public List<Usuarios> ObtenerTodos() {return repo.findAll();}
+
+    @Override
+    public Usuarios AgregarUsuario(Usuarios usuario) {
+        return repo.save(usuario);
+    }
+
 }
 
 
