@@ -1,9 +1,6 @@
 package com.picture_kingdom.picture_kingdom.modelo;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,13 +14,19 @@ public class Horarios {
     @Id
     @Column(name = "horarioid")
     private Integer horarioid;
-    @Column(name = "peliculaid")
-    private int peliculaid;
-    @Column(name="salaid")
-    private int salaid;
-    @Column(name="Fecha_y_hora_inicio")
-    private String FechahoraInicio;
-    @Column(name="diaid")
-    private int diaid;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "peliculaid", nullable = false)
+    private Peliculas pelicula;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "salaid", nullable = false)
+    private Salas sala;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "diaid", nullable = false)
+    private Dias dia;
+
+    @Column(name="hora_inicio")
+    private String inicio;
 
 }

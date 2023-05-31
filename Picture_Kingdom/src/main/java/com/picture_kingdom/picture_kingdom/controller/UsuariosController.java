@@ -1,7 +1,9 @@
 package com.picture_kingdom.picture_kingdom.controller;
 
 import com.picture_kingdom.picture_kingdom.modelo.Asientos;
+import com.picture_kingdom.picture_kingdom.modelo.Usuarios;
 import com.picture_kingdom.picture_kingdom.servicio.AsientosServicio;
+import com.picture_kingdom.picture_kingdom.servicio.UsuariosServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,13 +14,13 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/asientos")
-public class AsientosController {
+@RequestMapping("/usuarios")
+public class UsuariosController {
     @Autowired
 
-    private AsientosServicio as;
+    private UsuariosServicio as;
     @GetMapping
-    public List<Asientos> ObtenerTodos() {return as.ObtenerTodos();}
+    public List<Usuarios> ObtenerTodos() {return as.ObtenerTodos();}
 
 
 }
