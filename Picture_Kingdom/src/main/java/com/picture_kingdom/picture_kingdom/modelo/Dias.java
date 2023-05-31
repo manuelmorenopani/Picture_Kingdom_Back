@@ -12,15 +12,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "salas")
-public class Salas {
+@Table(name = "dias")
+public class Dias {
     @Id
-    @Column(name = "salaid")
-    private Integer salaid;
-    @Column(name = "nombre")
-    private String nombre;
-    @Column(name="tipo")
-    private String tipo;
-
+    @Column(name = "diaid")
+    private Integer diaid;
+    @Column(name = "dia")
+    private String dia;
 
 }

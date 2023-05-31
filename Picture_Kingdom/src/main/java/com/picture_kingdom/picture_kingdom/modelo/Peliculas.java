@@ -1,9 +1,6 @@
 package com.picture_kingdom.picture_kingdom.modelo;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,8 +12,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "peliculas")
 public class Peliculas {
     @Id
-    @Column(name = "id")
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     @Column(name = "titulo")
     private String titulo;
     @Column(name="sinopsis")
@@ -33,6 +30,4 @@ public class Peliculas {
     private String anio;
     @Column(name="imagen")
     private String imagen;
-
-
 }

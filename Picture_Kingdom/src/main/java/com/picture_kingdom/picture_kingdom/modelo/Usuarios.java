@@ -15,15 +15,13 @@ import lombok.NoArgsConstructor;
 @Table(name = "usuarios")
 public class Usuarios {
     @Id
-    @Column(name = "Usuario")
-    private String Usuario;
-    @Column(name = "Nombre")
-    private String Nombre;
-    @Column(name="Correo_electronico")
-    private String Correo;
-    @Column(name="Telefono")
-    private int Telefono;
-    @Column(name="Direccion")
-    private String Direccion;
+    @Column(name = "usuario")
+    private String usuario;
+    @Column(name = "pass")
+    private String pass;
+    @Column(name = "nombre")
+    private String nombre;
+    @Column(name="correo_electronico")
+    private String correo;
 
 }

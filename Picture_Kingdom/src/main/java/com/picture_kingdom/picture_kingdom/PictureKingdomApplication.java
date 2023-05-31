@@ -1,6 +1,7 @@
 package com.picture_kingdom.picture_kingdom;
 
 import com.picture_kingdom.picture_kingdom.controller.AsientosController;
+import com.picture_kingdom.picture_kingdom.modelo.Peliculas;
 import com.picture_kingdom.picture_kingdom.servicio.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -36,8 +37,8 @@ public class PictureKingdomApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("SPRING Boot Application Running");
-        peliculas.ObtenerTodos().forEach(System.out::println);
+
+
 
 
     }

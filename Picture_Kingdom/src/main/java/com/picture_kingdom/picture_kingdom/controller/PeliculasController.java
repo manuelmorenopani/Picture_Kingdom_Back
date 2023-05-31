@@ -5,10 +5,7 @@ import com.picture_kingdom.picture_kingdom.modelo.Peliculas;
 import com.picture_kingdom.picture_kingdom.servicio.AsientosServicio;
 import com.picture_kingdom.picture_kingdom.servicio.PeliculasServicio;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,5 +21,11 @@ public class PeliculasController {
     public List<Peliculas> ObtenerTodos() {
         return ps.ObtenerTodos();
     }
+    @GetMapping("/{id}")
+    public Peliculas obtenerPeliculaPorId(@PathVariable long id) {
+        return ps.obtenerPeliculaPorId(id);
+    }
+    }
 
-}
+
+

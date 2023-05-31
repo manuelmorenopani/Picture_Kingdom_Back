@@ -16,16 +16,18 @@ import lombok.NoArgsConstructor;
 public class Asientos {
     @Id
     @Column(name = "asientoid")
-    private int asientoid;
+    private Integer asientoid;
     @Column(name = "salaid")
     private int salaid;
+    @Column(name = "peliculaid")
+    private int peliculaid;
+    @Column(name = "horarioid")
+    private int horarioid;
     @Column(name="letra_fila")
-    private int letrafila;
+    private String letrafila;
     @Column(name="num_asiento")
     private int numeroasiento;
-    @Column(name="estado")
-    private boolean estado;
-    @Column(name="seleccionado")
-    private boolean seleccionado;
+    @Column(name="ocupado")
+    private boolean ocupado;
 
 }

@@ -14,7 +14,13 @@ public class PeliculasServicio implements IPeliculasServicio {
     private IPeliculasRepo repo;
 
     @Override
-    public List<Peliculas> ObtenerTodos() {return repo.findAll();}
+    public List<Peliculas> ObtenerTodos() {return repo.findAll();
+    }
+
+    @Override
+    public Peliculas obtenerPeliculaPorId(long id) {
+        return repo.findById(id);
+    }
 }
 
 
