@@ -7,6 +7,7 @@ import com.picture_kingdom.picture_kingdom.repo.IHorariosRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 @Service
 public class HorariosServicio implements IHorariosServicio {
@@ -15,6 +16,15 @@ public class HorariosServicio implements IHorariosServicio {
 
     @Override
     public List<Horarios> ObtenerTodos() {return repo.findAll();}
+
+    @Override
+    public List<Horarios> obtenerHorariosPorPeliculaYDia(Integer peliculaid, Integer diaid) {
+        if (repo instanceof IHorariosRepo) {
+            IHorariosRepo horariosRepo = (IHorariosRepo) repo;
+            return horariosRepo.findByPeliculaidAndDiaid(peliculaid, diaid);
+        }
+        return Collections.emptyList();
+    }
 }
 
 

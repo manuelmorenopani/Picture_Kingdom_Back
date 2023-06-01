@@ -19,5 +19,4 @@ public class Dias {
     private Integer diaid;
     @Column(name = "dia")
     private String dia;
-
 }

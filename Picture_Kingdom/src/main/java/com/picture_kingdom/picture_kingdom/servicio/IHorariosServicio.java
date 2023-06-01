@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface IHorariosServicio {
     List<Horarios> ObtenerTodos();
+    List<Horarios> obtenerHorariosPorPeliculaYDia(Integer peliculaid, Integer diaid);
+
 }
