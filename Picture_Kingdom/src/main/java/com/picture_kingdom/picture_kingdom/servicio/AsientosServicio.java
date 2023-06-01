@@ -1,6 +1,7 @@
 package com.picture_kingdom.picture_kingdom.servicio;
 
 import com.picture_kingdom.picture_kingdom.modelo.Asientos;
+import com.picture_kingdom.picture_kingdom.modelo.Usuarios;
 import com.picture_kingdom.picture_kingdom.repo.IAsientosRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,5 +14,10 @@ public class AsientosServicio implements IAsientosServicio {
 
     @Override
     public List<Asientos> ObtenerTodos() {return repo.findAll();}
+
+    @Override
+    public Asientos Agregarasientos(Asientos asientos) {
+        return repo.save(asientos);
+    }
 }
 

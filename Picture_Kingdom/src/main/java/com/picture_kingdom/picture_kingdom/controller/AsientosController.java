@@ -1,12 +1,10 @@
 package com.picture_kingdom.picture_kingdom.controller;
 
 import com.picture_kingdom.picture_kingdom.modelo.Asientos;
+import com.picture_kingdom.picture_kingdom.modelo.Usuarios;
 import com.picture_kingdom.picture_kingdom.servicio.AsientosServicio;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +18,8 @@ public class AsientosController {
     @GetMapping
     public List<Asientos> ObtenerTodos() {return as.ObtenerTodos();}
 
-
+    @PostMapping("/agregarAsientos")
+    public Asientos Agregarasientos(@RequestBody Asientos asientos) {
+        return as.Agregarasientos(asientos);
+    }
 }
