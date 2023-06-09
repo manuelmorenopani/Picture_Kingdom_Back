@@ -7,4 +7,7 @@ import java.util.List;
 
 public interface IVentasServicio {
     List<Ventas> ObtenerTodos();
+
+    Ventas AgregarVentas(Ventas ventas);
+
 }

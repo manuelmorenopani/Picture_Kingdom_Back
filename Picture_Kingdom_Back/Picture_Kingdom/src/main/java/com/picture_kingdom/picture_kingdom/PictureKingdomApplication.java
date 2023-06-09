@@ -2,6 +2,7 @@ package com.picture_kingdom.picture_kingdom;
 
 import com.picture_kingdom.picture_kingdom.controller.AsientosController;
 import com.picture_kingdom.picture_kingdom.controller.PeliculasController;
+import com.picture_kingdom.picture_kingdom.controller.VentasController;
 import com.picture_kingdom.picture_kingdom.modelo.*;
 import com.picture_kingdom.picture_kingdom.servicio.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,12 +34,15 @@ public class PictureKingdomApplication implements CommandLineRunner {
     private AsientosController asientosc;
     @Autowired
     private PeliculasController peliculasc;
+    @Autowired
+    private VentasController ventassc;
     public static void main(String[] args) {
         SpringApplication.run(PictureKingdomApplication.class, args);
     }
 
     @Override
     public void run(String... args) throws Exception {
+
     }
 
 }

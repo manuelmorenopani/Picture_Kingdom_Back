@@ -18,7 +18,7 @@ public class Ventas {
     @JoinColumn(name = "peliculaid", nullable = false)
     private Peliculas peliculaid;
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "asientod", nullable = false)
+    @JoinColumn(name = "asientoid", nullable = false)
     private Dias asientoid;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "salaid", nullable = true)
@@ -31,9 +31,8 @@ public class Ventas {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "diaid", nullable = false)
     private Dias diaid;
-
-    @Column(name="fecha_Venta")
-    private String fechaVenta;
+    @Column(name="fecha_venta")
+    private String fechaventa;
     @Column(name="tipo_entrada")
     private String tipo_entrada;
     @Column(name="precio")

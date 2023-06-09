@@ -16,6 +16,11 @@ public class VentasServicio implements IVentasServicio {
 
     @Override
     public List<Ventas> ObtenerTodos() {return repo.findAll();}
+
+    @Override
+    public Ventas AgregarVentas(Ventas ventas) {
+        System.out.println(ventas);return repo.saveAndFlush(ventas);
+    }
 }
 
 
